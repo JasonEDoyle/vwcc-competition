@@ -1,67 +1,48 @@
-#! /usr/bin/env python 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import cv2, math
+import numpy as np
 
-# example code from
-# http://www.davidhampgonsalves.com/opencv-python-color-tracking/
-
-import cv
-
-color_tracker_window = "Color Tracker"
-
-class ColorTracker:
-
+class ColourTracker:
     def __init__(self):
-        cv.NamedWindow( color_tracker_window, 1 )
-        self.capture = cv.CaptureFromCAM(0)
+        cv2.namedWindow("ColourTrackerWindow", cv2.CV_WINDOW_AUTOSIZE)
+        self.capture = cv2.VideoCapture(0)
+        self.scale_down = 4
 
     def run(self):
         while True:
-            img = cv.QueryFrame( self.capture )
-
-            #blur the source image to reduce color noise 
-            cv.Smooth(img, img, cv.CV_BLUR, 3);
-
-            #convert the image to hsv(Hue, Saturation, Value) so its  
-            #easier to determine the color to track(hue) 
-            hsv_img = cv.CreateImage(cv.GetSize(img), 8, 3)
-            cv.CvtColor(img, hsv_img, cv.CV_BGR2HSV)
-
-            #limit all pixels that don't match our criteria, in this case we are  
-            #looking for purple but if you want you can adjust the first value in  
-            #both turples which is the hue range(120,140).  OpenCV uses 0-180 as  
-            #a hue range for the HSV color model 
-            thresholded_img =  cv.CreateImage(cv.GetSize(hsv_img), 8, 1)
-            cv.InRangeS(hsv_img, (120, 80, 80), (140, 255, 255), thresholded_img)
-
-            #determine the objects moments and check that the area is large  
-            #enough to be our object 
-            moments = cv.Moments(thresholded_img, 0)
-            area = cv.GetCentralMoment(moments, 0, 0)
-
-            #there can be noise in the video so ignore objects with small areas 
-            if(area > 100000):
-                #determine the x and y coordinates of the center of the object 
-                #we are tracking by dividing the 1, 0 and 0, 1 moments by the area 
-                x = cv.GetSpatialMoment(moments, 1, 0)/area
-                y = cv.GetSpatialMoment(moments, 0, 1)/area
-
-                #print 'x: ' + str(x) + ' y: ' + str(y) + ' area: ' + str(area) 
-
-                #create an overlay to mark the center of the tracked object 
-                overlay = cv.CreateImage(cv.GetSize(img), 8, 3)
-
-                cv.Circle(overlay, (x, y), 2, (255, 255, 255), 20)
-                cv.Add(img, overlay, img)
-                #add the thresholded image back to the img so we can see what was  
-                #left after it was applied 
-                cv.Merge(thresholded_img, None, None, None, img)
-
-            #display the image  
-            cv.ShowImage(color_tracker_window, img)
-
-            if cv.WaitKey(10) == 27:
-                break
-
-if __name__=="__main__":
-    color_tracker = ColorTracker()
-    color_tracker.run()
-
+            f, orig_img = self.capture.read()
+            orig_img = cv2.flip(orig_img, 1)
+            img = cv2.GaussianBlur(orig_img, (5,5), 0)
+            img = cv2.cvtColor(orig_img, cv2.COLOR_BGR2HSV)
+            img = cv2.resize(img, (len(orig_img[0]) / self.scale_down, len(orig_img) / self.scale_down))
+            red_lower = np.array([0, 150, 0],np.uint8)
+            red_upper = np.array([5, 255, 255],np.uint8)
+            red_binary = cv2.inRange(img, red_lower, red_upper)
+            dilation = np.ones((15, 15), "uint8")
+            red_binary = cv2.dilate(red_binary, dilation)
+            contours, hierarchy = cv2.findContours(red_binary, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+            max_area = 0
+            largest_contour = None
+            for idx, contour in enumerate(contours):
+                area = cv2.contourArea(contour)
+                if area > max_area:
+                    max_area = area
+                    largest_contour = contour
+                if not largest_contour == None:
+                    moment = cv2.moments(largest_contour)
+                if moment["m00"] > 1000 / self.scale_down:
+                    rect = cv2.minAreaRect(largest_contour)
+                    rect = ((rect[0][0] * self.scale_down, rect[0][1] * self.scale_down), (rect[1][0] * self.scale_down, rect[1][1] * self.scale_down), rect[2])
+                    box = cv2.cv.BoxPoints(rect)
+                    box = np.int0(box)
+                    cv2.drawContours(orig_img,[box], 0, (0, 0, 255), 2)
+                    cv2.imshow("ColourTrackerWindow", orig_img)
+                    if cv2.waitKey(20) == 27:
+                        cv2.destroyWindow("ColourTrackerWindow")
+                        self.capture.release()
+                        break
+  
+if __name__ == "__main__":
+    colour_tracker = ColourTracker()
+    colour_tracker.run()
