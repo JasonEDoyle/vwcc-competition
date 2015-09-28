@@ -14,10 +14,6 @@ CON
 
     _clkmode = xtal1 + pll16x       ' System clock 80 MHz
     _xinfreq = 5_000_000
-
-  CLK_FREQ = ((_clkmode - xtal1) >> 6) * _xinfreq
-  MS_001   = CLK_FREQ / 1_000
-  US_001   = CLK_FREQ / 1_000_000
       
 '    PING_PIN    = 1
     PPM_PIN     = 25
@@ -30,6 +26,8 @@ CON
     PITCH_CH    = 1
     ROLL_CH     = 2
     YAW_CH      = 3
+    FMODE_CH    = 4
+    ARMING_CH   = 5
 
 ' Servo poitions
     SVO_MIN     = 1_000                                               ' servo limits in microseconds
@@ -45,20 +43,74 @@ OBJ
 
 PUB Main
     
-    ppm.start(PPM_PIN, 0, 4, 300, 20_000) ' 4 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
+    ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
     
-    ' Initailize controls
-    ppm.set(TH_CH, SVO_CTR)     ' Set throttle to 0
-    ppm.set(PITCH_CH, SVO_CTR)  ' Center pith control
-    ppm.set(ROLL_CH, SVO_CTR)   ' Center Roll
-    ppm.set(YAW_CH, SVO_CTR)    ' Center Yaw
-
-pub pause(ms) | t
-
-'' Delay program ms milliseconds
-
-  t := cnt - 1088                                               ' sync with system counter
-  repeat (ms #> 0)                                              ' delay must be > 0
-    waitcnt(t += MS_001)
     
+
+pub pause(ms)
+
+    waitcnt(ms*(clkfreq/1000) + cnt)
+    
+PRI Cal_channels
+
+ ' Initailize controls
+    repeat 5
+      ppm.set(TH_CH, SVO_MIN)     ' Set throttle to 0
+      pause(500)
+      ppm.set(TH_CH, SVO_CTR)     ' Set throttle to 0
+      pause(500)
+      ppm.set(TH_CH, SVO_MAX)     ' Set throttle to 0
+      pause(500)
+    ppm.set(TH_CH, SVO_CTR)     ' Set throttle to 0
+    pause(1000)
+
+    repeat 5
+      ppm.set(ROLL_CH, SVO_MIN)     ' Set throttle to 0
+      pause(500)
+      ppm.set(ROLL_CH, SVO_CTR)     ' Set throttle to 0
+      pause(500)
+      ppm.set(ROLL_CH, SVO_MAX)     ' Set throttle to 0
+      pause(500)
+    ppm.set(ROLL_CH, SVO_CTR)     ' Set throttle to 0
+    pause(1000)
+
+    repeat 5
+      ppm.set(PITCH_CH, SVO_MIN)     ' Set throttle to 0
+      pause(500)
+      ppm.set(PITCH_CH, SVO_CTR)     ' Set throttle to 0
+      pause(500)
+      ppm.set(PITCH_CH, SVO_MAX)     ' Set throttle to 0
+      pause(500)
+    ppm.set(PITCH_CH, SVO_CTR)     ' Set throttle to 0
+    pause(1000)
+
+    repeat 5
+      ppm.set(YAW_CH, SVO_MIN)     ' Set throttle to 0
+      pause(500)
+      ppm.set(YAW_CH, SVO_CTR)     ' Set throttle to 0
+      pause(500)
+      ppm.set(YAW_CH, SVO_MAX)     ' Set throttle to 0
+      pause(500)
+    ppm.set(YAW_CH, SVO_CTR)     ' Set throttle to 0
+    pause(1000)
+
+    repeat 10
+      ppm.set(FMODE_CH, SVO_MIN)     ' Set throttle to 0
+      pause(500)
+      ppm.set(FMODE_CH, SVO_CTR)     ' Set throttle to 0
+      pause(500)
+      ppm.set(FMODE_CH, SVO_MAX)     ' Set throttle to 0
+      pause(500)
+    ppm.set(FMODE_CH, SVO_CTR)     ' Set throttle to 0
+    pause(1000)
+
+    repeat 10
+      ppm.set(ARMING_CH, SVO_MIN)     ' Set throttle to 0
+      pause(500)
+      ppm.set(ARMING_CH, SVO_CTR)     ' Set throttle to 0
+      pause(500)
+      ppm.set(ARMING_CH, SVO_MAX)     ' Set throttle to 0
+      pause(500)
+    ppm.set(ARMING_CH, SVO_CTR)     ' Set throttle to 0
+    pause(1000)
