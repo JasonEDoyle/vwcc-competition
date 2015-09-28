@@ -45,10 +45,27 @@ PUB Main
     
     ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
-    
-    Cal_channels
-    
 
+    'Cal_channels
+    
+    ppm.setall(SVO_MIN)         ' Set all channels to min value
+
+    ppm.set(ROLL_CH, SVO_CTR)   ' Set controls to center
+    ppm.set(PITCH_CH, SVO_CTR)
+    ppm.set(YAW_CH, SVO_CTR)
+
+    pause(1000)                 ' Pause for 1 sec
+    ppm.set(ARMING_CH, SVO_MAX)    ' Arm the flight controller
+    pause(3000)                 ' Wait for flight controller to arm
+
+    ppm.set(TH_CH, 1_550)
+    pause(5000)
+
+    ppm.set(TH_CH, SVO_MIN)
+    
+    pause(500)
+    ppm.set(ARMING_CH, SVO_MIN) ' Disarm the flight controller
+    
 pub pause(ms)
 
     waitcnt(ms*(clkfreq/1000) + cnt)
