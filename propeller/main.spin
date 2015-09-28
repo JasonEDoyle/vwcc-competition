@@ -23,8 +23,8 @@ CON
 
 ' RC Channels
     TH_CH       = 0
-    PITCH_CH    = 1
-    ROLL_CH     = 2
+    ROLL_CH     = 1
+    PITCH_CH    = 2
     YAW_CH      = 3
     FMODE_CH    = 4
     ARMING_CH   = 5
@@ -46,6 +46,7 @@ PUB Main
     ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
     
+    Cal_channels
     
 
 pub pause(ms)
@@ -56,61 +57,62 @@ PRI Cal_channels
 
  ' Initailize controls
     repeat 5
-      ppm.set(TH_CH, SVO_MIN)     ' Set throttle to 0
+      ppm.set(TH_CH, SVO_MIN)     ' Set throttle channel to min 1.0 ms
       pause(500)
-      ppm.set(TH_CH, SVO_CTR)     ' Set throttle to 0
+      ppm.set(TH_CH, SVO_CTR)     ' Set throttle channel to center 1.5 ms
       pause(500)
-      ppm.set(TH_CH, SVO_MAX)     ' Set throttle to 0
+      ppm.set(TH_CH, SVO_MAX)     ' Set throttle channel to max 2.0 ms
       pause(500)
-    ppm.set(TH_CH, SVO_CTR)     ' Set throttle to 0
+    ppm.set(TH_CH, SVO_CTR)     ' Set throttle channel to center
     pause(1000)
 
     repeat 5
-      ppm.set(ROLL_CH, SVO_MIN)     ' Set throttle to 0
+      ppm.set(ROLL_CH, SVO_MIN)     ' Set roll channel to min  1.0 ms
       pause(500)
-      ppm.set(ROLL_CH, SVO_CTR)     ' Set throttle to 0
+      ppm.set(ROLL_CH, SVO_CTR)     ' Set roll channel to center 1.5 ms
       pause(500)
-      ppm.set(ROLL_CH, SVO_MAX)     ' Set throttle to 0
+      ppm.set(ROLL_CH, SVO_MAX)     ' Set roll channel to max 2.0 ms
       pause(500)
-    ppm.set(ROLL_CH, SVO_CTR)     ' Set throttle to 0
+    ppm.set(ROLL_CH, SVO_CTR)     ' Set roll channel to center
     pause(1000)
 
     repeat 5
-      ppm.set(PITCH_CH, SVO_MIN)     ' Set throttle to 0
+      ppm.set(PITCH_CH, SVO_MIN)     ' Set pitch channel to min 1.0 ms
       pause(500)
-      ppm.set(PITCH_CH, SVO_CTR)     ' Set throttle to 0
+      ppm.set(PITCH_CH, SVO_CTR)     ' Set pitch channel to center 1.5 ms
       pause(500)
-      ppm.set(PITCH_CH, SVO_MAX)     ' Set throttle to 0
+      ppm.set(PITCH_CH, SVO_MAX)     ' Set pitch channel to max 2.0 ms
       pause(500)
-    ppm.set(PITCH_CH, SVO_CTR)     ' Set throttle to 0
+    ppm.set(PITCH_CH, SVO_CTR)     ' Set pitch channel to center
     pause(1000)
 
     repeat 5
-      ppm.set(YAW_CH, SVO_MIN)     ' Set throttle to 0
+      ppm.set(YAW_CH, SVO_MIN)     ' Set yaw channel to min 1.0 ms
       pause(500)
-      ppm.set(YAW_CH, SVO_CTR)     ' Set throttle to 0
+      ppm.set(YAW_CH, SVO_CTR)     ' Set yaw channel to center 1.5 ms
       pause(500)
-      ppm.set(YAW_CH, SVO_MAX)     ' Set throttle to 0
+      ppm.set(YAW_CH, SVO_MAX)     ' Set yaw channel to max 2.0 ms
       pause(500)
-    ppm.set(YAW_CH, SVO_CTR)     ' Set throttle to 0
+    ppm.set(YAW_CH, SVO_CTR)     ' Set pitch channel to center
     pause(1000)
 
     repeat 10
-      ppm.set(FMODE_CH, SVO_MIN)     ' Set throttle to 0
+      ppm.set(FMODE_CH, SVO_MIN)     ' Set flight mode channel to min 1.0 ms
       pause(500)
-      ppm.set(FMODE_CH, SVO_CTR)     ' Set throttle to 0
+      ppm.set(FMODE_CH, SVO_CTR)     ' Set flight mode channel to center 1.5 ms
       pause(500)
-      ppm.set(FMODE_CH, SVO_MAX)     ' Set throttle to 0
+      ppm.set(FMODE_CH, SVO_MAX)     ' Set flight mode channel to max 2.0 ms
       pause(500)
-    ppm.set(FMODE_CH, SVO_CTR)     ' Set throttle to 0
+    ppm.set(FMODE_CH, SVO_CTR)     ' Set flight mode channel to center
     pause(1000)
 
     repeat 10
-      ppm.set(ARMING_CH, SVO_MIN)     ' Set throttle to 0
+      ppm.set(ARMING_CH, SVO_MIN)     ' Set arming channel to min 1.0 ms
       pause(500)
-      ppm.set(ARMING_CH, SVO_CTR)     ' Set throttle to 0
+      ppm.set(ARMING_CH, SVO_CTR)     ' Set arming channel to center 1.5 ms
       pause(500)
-      ppm.set(ARMING_CH, SVO_MAX)     ' Set throttle to 0
+      ppm.set(ARMING_CH, SVO_MAX)     ' Set arming channel to max 2.0 ms
       pause(500)
-    ppm.set(ARMING_CH, SVO_CTR)     ' Set throttle to 0
+    ppm.set(ARMING_CH, SVO_CTR)     ' Set arming channel to center
     pause(1000)
+    
