@@ -1,6 +1,13 @@
 # Propeller
 *.binary
 
+#Tex docs
+tech_report/*.aux
+tech_report/*.lof
+tech_report/*.log
+tech_report/*.pdf
+tech_report/*.gz
+tech_report/*.toc
 
 # Python gitignore from Github
 # Byte-compiled / optimized / DLL files
