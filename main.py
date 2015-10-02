@@ -11,6 +11,7 @@
 # import the necessary packages
 from picamera.array import PiRGBArray
 from picamera import PiCamera
+import numpy as np
 import time
 import cv2
  
