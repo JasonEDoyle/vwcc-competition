@@ -10,6 +10,7 @@
 # import the necessary packages
 import time
 import cv2
+import numpy as np
  
 cap = cv2.VideoCapture(0)
 
@@ -32,7 +33,7 @@ while(1):
     res = cv2.bitwise_and(frame,frame, mask= mask)
 
     # show the frame
-    cv2.imshow("Frame", image)
+    cv2.imshow("Frame", frame)
     cv2.imshow('mask',mask)
     cv2.imshow('res',res)
     
