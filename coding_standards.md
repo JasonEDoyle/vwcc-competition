@@ -1,9 +1,8 @@
 ### Commit Message Guidelines ###
 
-* Add: New function to rule the world.  
-* Mod: Add women factor in Domination.ruleTheWorld().  
-* Ref: Extract empathy stuff to an abstract class.  
-* Fix: RUL-42 or #42 Starvation need to be initialised before Energy to avoid the nullpointer in People.  
-* Rem: freeSpeech is not used anymore.  
-* Rea: Removed old TODO and extra space in header.
-* With Add, Mod(ify), Ref(actoring), Fix, Rem(ove) and Rea(dability) then it's easy to extract logfile.
+* ADD: for adding new code
+* MOD: addition or modification to an existing file
+* REF: reshuffling of code into several file(s)
+* FIX: modifying a file to fix a bug
+* REM: removal of file or code in file
+* REA: update code for readability
