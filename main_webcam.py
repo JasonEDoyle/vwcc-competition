@@ -40,7 +40,7 @@ while(1):
     # Find the index of the largest contour
     areas = [cv2.contourArea(c) for c in contours]
 
-    if len(areas) > 1:
+    if len(areas) > 0:
         max_index = np.argmax(areas)
         cnt=contours[max_index]
      
@@ -50,13 +50,16 @@ while(1):
         x,y,w,h = cv2.boundingRect(cnt)
         cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
         # Bitwise-AND mask and original image
-    res = cv2.bitwise_and(frame,frame, mask= mask)
-    
+        centerx = w/2 + x
+        centery = h/2 + y
+
+        cv2.line(frame, (centerx-3, centery),(centerx+3,centery),(0,255,0),1)
+        cv2.line(frame, (centerx, centery-3),(centerx, centery+3),(0,255,0),1)
+
+ 
     # show the frame
     cv2.imshow("Frame", frame)
-    cv2.imshow('mask',mask)
-    cv2.imshow('res',res)
-
+    # cv2.imshow('mask',mask)
  
     # if the `q` key was pressed, break from the loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
