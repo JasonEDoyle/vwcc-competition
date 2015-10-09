@@ -14,6 +14,8 @@ import numpy as np
  
 cap = cv2.VideoCapture(0)
 
+center_x = 320
+center_y = 240
 while(1):
 
     # Take each frame
@@ -21,7 +23,7 @@ while(1):
 
     # Convert BGR to HSV
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
+ 
     # define range of red color in HSV
     lower_red = np.array([110,50,50])
     upper_red = np.array([130,255,255])
@@ -50,11 +52,11 @@ while(1):
         x,y,w,h = cv2.boundingRect(cnt)
         cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
         # Bitwise-AND mask and original image
-        centerx = w/2 + x
-        centery = h/2 + y
+        center_x = w/2 + x
+        center_y = h/2 + y
 
-        cv2.line(frame, (centerx-3, centery),(centerx+3,centery),(0,255,0),1)
-        cv2.line(frame, (centerx, centery-3),(centerx, centery+3),(0,255,0),1)
+        cv2.line(frame, (center_x-3, center_y),(center_x+3,center_y),(0,255,0),1)
+        cv2.line(frame, (center_x, center_y-3),(center_x, center_y+3),(0,255,0),1)
 
  
     # show the frame
