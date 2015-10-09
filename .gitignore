@@ -18,6 +18,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Documentation Extensions
+*.swp
+*.swap
+*~
+*.kate-swp
+
 # Distribution / packaging
 .Python
 env/
