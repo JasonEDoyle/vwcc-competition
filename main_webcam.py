@@ -29,14 +29,34 @@ while(1):
     # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_red, upper_red)
 
-    # Bitwise-AND mask and original image
-    res = cv2.bitwise_and(frame,frame, mask= mask)
+    kernel = np.ones((5,5),np.uint8)
+    erosion = cv2.erode(mask,kernel,iterations = 1)
+    kernel = np.ones((5,5),np.uint8)
+    dilation = cv2.dilate(erosion,kernel,iterations = 5)
 
+    contours, hierarchy = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+
+
+    # Find the index of the largest contour
+    areas = [cv2.contourArea(c) for c in contours]
+
+    if len(areas) > 1:
+        max_index = np.argmax(areas)
+        cnt=contours[max_index]
+     
+        # Bitwise-AND mask and original image
+    #   res = cv2.bitwise_and(img,img, mask= mask)
+           
+        x,y,w,h = cv2.boundingRect(cnt)
+        cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
+        # Bitwise-AND mask and original image
+    res = cv2.bitwise_and(frame,frame, mask= mask)
+    
     # show the frame
     cv2.imshow("Frame", frame)
     cv2.imshow('mask',mask)
     cv2.imshow('res',res)
-    
+
  
     # if the `q` key was pressed, break from the loop
     if cv2.waitKey(1) & 0xFF == ord('q'):
