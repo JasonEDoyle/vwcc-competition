@@ -16,7 +16,7 @@ import time
 import cv2
  
 # Define the codec and create VideoWriter object
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
+fourcc = cv2.cv.CV_FOURCC(*'XVID')
 out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
 
 # initialize the camera and grab a reference to the raw camera capture
