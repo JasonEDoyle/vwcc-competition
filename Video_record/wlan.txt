@@ -1,0 +1,745 @@
+wlan0     Scan completed :
+          Cell 01 - Address: 06:52:C2:3F:2A:29
+                    ESSID:"test"
+                    Protocol:IEEE 802.11bg
+                    Mode:Ad-Hoc
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:off
+                    Bit Rates:54 Mb/s
+                    Quality=100/100  Signal level=100/100  
+          Cell 02 - Address: 00:19:77:57:B8:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=60/100  
+          Cell 03 - Address: 00:19:77:57:B8:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=90/100  Signal level=63/100  
+          Cell 04 - Address: 00:19:77:57:B8:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=63/100  
+          Cell 05 - Address: 00:19:77:57:B8:57
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=88/100  Signal level=61/100  
+          Cell 06 - Address: 00:19:77:57:F1:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=56/100  
+          Cell 07 - Address: 00:19:77:57:F1:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=88/100  Signal level=58/100  
+          Cell 08 - Address: 00:19:77:57:F1:57
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=56/100  
+          Cell 09 - Address: 00:19:77:57:BF:D4
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=42/100  
+          Cell 10 - Address: 00:19:77:57:BF:D7
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=95/100  Signal level=42/100  
+          Cell 11 - Address: 00:19:77:57:DC:D6
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=84/100  Signal level=56/100  
+          Cell 12 - Address: 00:19:77:57:DC:D5
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=0/100  Signal level=58/100  
+          Cell 13 - Address: 00:19:77:57:DC:D4
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=58/100  
+          Cell 14 - Address: 00:19:77:57:DC:D7
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=58/100  
+          Cell 15 - Address: 00:19:77:50:75:95
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality:63  Signal level:0  Noise level:0
+          Cell 16 - Address: 00:19:77:50:75:94
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=61/100  Signal level=7/100  
+          Cell 17 - Address: 00:19:77:38:8E:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=96/100  Signal level=45/100  
+          Cell 18 - Address: 00:19:77:38:8E:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=44/100  
+          Cell 19 - Address: 00:19:77:38:8E:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=44/100  
+          Cell 20 - Address: 00:19:77:38:8E:57
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=45/100  
+          Cell 21 - Address: 00:19:77:36:11:D5
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=58/100  
+          Cell 22 - Address: 00:19:77:36:11:D4
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=58/100  
+          Cell 23 - Address: 00:19:77:36:11:D7
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=58/100  
+          Cell 24 - Address: 00:19:77:35:D6:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=70/100  
+          Cell 25 - Address: 00:19:77:35:D6:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=70/100  
+          Cell 26 - Address: 00:19:77:35:D6:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=70/100  
+          Cell 27 - Address: 00:19:77:57:F1:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=56/100  
+          Cell 28 - Address: 00:19:77:36:11:D6
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=60/100  
+          Cell 29 - Address: 00:19:77:57:EE:14
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=43/100  
+          Cell 30 - Address: 00:19:77:57:EE:15
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=86/100  Signal level=43/100  
+
+wlan0     Scan completed :
+          Cell 01 - Address: 00:19:77:35:D6:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=68/100  
+          Cell 02 - Address: 00:19:77:35:D6:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=68/100  
+          Cell 03 - Address: 00:19:77:35:D6:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=70/100  
+          Cell 04 - Address: 00:19:77:35:D6:57
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=70/100  
+          Cell 05 - Address: 00:19:77:57:B8:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=60/100  
+          Cell 06 - Address: 00:19:77:57:B8:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=60/100  
+          Cell 07 - Address: 00:19:77:57:B8:57
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.412 GHz (Channel 1)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=61/100  Signal level=60/100  
+          Cell 08 - Address: 00:19:77:57:DC:D6
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=58/100  
+          Cell 09 - Address: 00:19:77:57:DC:D5
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=88/100  Signal level=58/100  
+          Cell 10 - Address: 00:19:77:57:DC:D4
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=60/100  
+          Cell 11 - Address: 00:19:77:57:DC:D7
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=58/100  
+          Cell 12 - Address: 00:19:77:57:F1:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=58/100  
+          Cell 13 - Address: 00:19:77:57:F1:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=100/100  Signal level=56/100  
+          Cell 14 - Address: 00:19:77:57:BF:D4
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=93/100  Signal level=44/100  
+          Cell 15 - Address: 00:19:77:57:BF:D7
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.437 GHz (Channel 6)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=88/100  Signal level=44/100  
+          Cell 16 - Address: 00:19:77:38:8E:56
+                    ESSID:""
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:130 Mb/s
+                    Extra:rsn_ie=30160100000fac040100000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : CCMP
+                        Pairwise Ciphers (1) : CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=46/100  
+          Cell 17 - Address: 00:19:77:38:8E:55
+                    ESSID:"VWCCWiFi"
+                    Protocol:IEEE 802.11bgn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:65 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f201
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0100000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : 802.1x
+                    Quality=72/100  Signal level=46/100  
+          Cell 18 - Address: 00:19:77:38:8E:54
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=46/100  
+          Cell 19 - Address: 00:19:77:38:8E:57
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=46/100  
+          Cell 20 - Address: 00:19:77:36:11:D4
+                    ESSID:"VWCCGuest"
+                    Protocol:IEEE 802.11bg
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:on
+                    Bit Rates:54 Mb/s
+                    Extra:wpa_ie=dd1a0050f20101000050f20202000050f2020050f20401000050f202
+                    IE: WPA Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Extra:rsn_ie=301a0100000fac020200000fac02000fac040100000fac0200000000
+                    IE: IEEE 802.11i/WPA2 Version 1
+                        Group Cipher : TKIP
+                        Pairwise Ciphers (2) : TKIP CCMP
+                        Authentication Suites (1) : PSK
+                    Quality=100/100  Signal level=56/100  
+          Cell 21 - Address: 00:19:77:36:11:D7
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=100/100  Signal level=56/100  
+          Cell 22 - Address: 00:19:77:36:26:97
+                    ESSID:"VWCCHowToConnect"
+                    Protocol:IEEE 802.11bn
+                    Mode:Master
+                    Frequency:2.462 GHz (Channel 11)
+                    Encryption key:off
+                    Bit Rates:130 Mb/s
+                    Quality=86/100  Signal level=23/100  
+
