@@ -28,8 +28,8 @@ while(1):
     # Add trackbars to filter color.
 
     # define range of red color in HSV
-    lower_red = np.array([0,50,100])
-    upper_red = np.array([30,255,255])
+    lower_red = np.array([0,200,80])
+    upper_red = np.array([10,255,255])
 
     # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_red, upper_red)
