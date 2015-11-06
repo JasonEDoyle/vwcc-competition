@@ -12,7 +12,7 @@ import time
 import cv2
 import numpy as np
  
-cap = cv2.VideoCapture('videos/vid1.avi')
+cap = cv2.VideoCapture('videos/vid6.avi')
 
 center_x = 320
 center_y = 240
