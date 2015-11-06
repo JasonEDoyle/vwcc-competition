@@ -6,7 +6,7 @@
 ''               Copyright (c) 2015 Jason Doyle
 ''   E-mail..... jason.e.doyle@gmail.com
 ''   Started.... 06 SEP 2015
-''   Updated.... 
+''   Updated.... 06 NOV 2015
 ''
 '' =================================================================================================
 
@@ -45,33 +45,40 @@ PUB Main
     
     ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
-
-    'Cal_channels
     
+    ' Intialize all the channels   
     ppm.setall(SVO_MIN)         ' Set all channels to min value
 
     ppm.set(ROLL_CH, SVO_CTR)   ' Set controls to center
     ppm.set(PITCH_CH, SVO_CTR)
     ppm.set(YAW_CH, SVO_CTR)
+    
+    'cal_channels
+    
+'    pause(1000)                 ' Pause for 1 sec
+   arm_flight
 
-    pause(1000)                 ' Pause for 1 sec
-    ppm.set(ARMING_CH, SVO_MAX)    ' Arm the flight controller
-    pause(3000)                 ' Wait for flight controller to arm
-
-    ppm.set(TH_CH, 1_550)
+'    ppm.set(TH_CH, 1_550)
     pause(5000)
 
-    ppm.set(TH_CH, SVO_MIN)
+'    ppm.set(TH_CH, SVO_MIN)
     
-    pause(500)
-    ppm.set(ARMING_CH, SVO_MIN) ' Disarm the flight controller
+'    pause(500)
+    disarm_flight
     
 pub pause(ms)
 
     waitcnt(ms*(clkfreq/1000) + cnt)
     
-PRI Cal_channels
+PRI arm_flight
+    ppm.set(ARMING_CH, SVO_MAX)     ' Arm the flight controller
+    pause(3000)                     ' Wait for flight controller to arm
+    
+PRI disarm_flight
+    ppm.set(ARMING_CH, SVO_MIN)     ' Disarm the flight controller
+    pause(1000)                     ' Wait for flight controller to disarm
 
+PRI cal_channels
  ' Initailize controls
     repeat 5
       ppm.set(TH_CH, SVO_MIN)     ' Set throttle channel to min 1.0 ms
