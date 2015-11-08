@@ -6,7 +6,7 @@
 ''               Copyright (c) 2015 Jason Doyle
 ''   E-mail..... jason.e.doyle@gmail.com
 ''   Started.... 06 SEP 2015
-''   Updated.... 06 NOV 2015
+''   Updated.... 07 NOV 2015
 ''
 '' =================================================================================================
 
@@ -17,7 +17,7 @@ CON
       
 '    PING_PIN    = 1
     PPM_PIN     = 25
-
+    ARMED_LED   = 26
 '    RPI_RX_PIN  = 3
 '    RPI_TX_PIN  = 4
 
@@ -30,18 +30,27 @@ CON
     ARMING_CH   = 5
 
 ' Servo poitions
-    SVO_MIN     = 1_000                                               ' servo limits in microseconds
+    SVO_MIN     = 1_000                 ' servo limits in microseconds
     SVO_MAX     = 2_000
 
     SVO_CTR     = 1_500
 
+VAR
+    long  pulsewidth[6]
+    
+DAT
+  pins          LONG 1, 2, 3, 4, 5, 6
+'  pulseWidths   LONG 1, 1, 1, 1, 1
+  
 OBJ
 
     ppm     :   "jm_ppm"
     serial  :   "FullDuplexSerial"
     ping    :   "Ping"
-
-PUB Main
+'    rx      :   "ServoInput"
+    rx      :   "RX"
+    
+PUB Main | i
     
     ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
@@ -49,36 +58,69 @@ PUB Main
     ' Intialize all the channels   
     ppm.setall(SVO_MIN)         ' Set all channels to min value
 
-    ppm.set(ROLL_CH, SVO_CTR)   ' Set controls to center
-    ppm.set(PITCH_CH, SVO_CTR)
-    ppm.set(YAW_CH, SVO_CTR)
+'    ppm.set(ROLL_CH, SVO_CTR)   ' Set controls to center
+'    ppm.set(PITCH_CH, SVO_CTR)
+'    ppm.set(YAW_CH, SVO_CTR)
+    
+    dira[ARMED_LED] := 1        ' Set arming LED pin to output
     
     'cal_channels
+
+'    rx.start(@pins,5,@pulseWidths)
+    rx.Start(@pins,@pulseWidth)
     
+    repeat 
+        'rx.Measure(@pins,5,@pulseWidths)
+        'rx.readPins(@pins, @pulseWidth)
+        'rx_input
+        if pulsewidth[4] > 1_500            ' Switch autonomous mode on
+            'outa[ARMED_LED] := 1
+            arm_flight
+            ppm.set(0, pulsewidth[2])
+            ppm.set(1, pulsewidth[0])
+            ppm.set(2, pulsewidth[1])
+            ppm.set(3, pulsewidth[3])
+
+        else                                ' Switch autonomous mode off
+            'outa[ARMED_LED] := 0            ' Turn on arming LED
+            ppm.setall(SVO_MIN)
+            disarm_flight
+            
+           
 '    pause(1000)                 ' Pause for 1 sec
-   arm_flight
+'   arm_flight
 
 '    ppm.set(TH_CH, 1_550)
-    pause(5000)
+'    pause(5000)
 
 '    ppm.set(TH_CH, SVO_MIN)
     
 '    pause(500)
-    disarm_flight
+'    disarm_flight
     
-pub pause(ms)
+PUB pause(ms)
 
     waitcnt(ms*(clkfreq/1000) + cnt)
     
+'PUB rx_input  | i, pulse[6]
+
+'    rx.start(@pins,@pulseWidth)
+'    waitcnt(clkfreq/2 + cnt)
+
 PRI arm_flight
+
+    outa[ARMED_LED] := 1            ' Turn on arming LED
     ppm.set(ARMING_CH, SVO_MAX)     ' Arm the flight controller
-    pause(3000)                     ' Wait for flight controller to arm
+    'pause(3000)                     ' Wait for flight controller to arm
     
 PRI disarm_flight
+
+    outa[ARMED_LED] := 0            ' Turn off arming LED
     ppm.set(ARMING_CH, SVO_MIN)     ' Disarm the flight controller
-    pause(1000)                     ' Wait for flight controller to disarm
+    'pause(1000)                     ' Wait for flight controller to disarm
 
 PRI cal_channels
+
  ' Initailize controls
     repeat 5
       ppm.set(TH_CH, SVO_MIN)     ' Set throttle channel to min 1.0 ms
