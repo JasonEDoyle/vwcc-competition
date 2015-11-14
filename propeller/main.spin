@@ -78,7 +78,7 @@ PUB Main | i
             arm_flight
 
         else                                ' Disarm flight
-            ppm.setall(SVO_MIN)
+            'ppm.setall(SVO_MIN)
             disarm_flight
             
         if pulsewidth[4] > 1_500            ' Switch to autonomous mode
