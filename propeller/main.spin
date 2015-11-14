@@ -18,6 +18,7 @@ CON
 '    PING_PIN    = 1
     PPM_PIN     = 25
     ARMED_LED   = 26
+'    AUTO_LED    = 27
 '    RPI_RX_PIN  = 3
 '    RPI_TX_PIN  = 4
 
@@ -73,19 +74,20 @@ PUB Main | i
         'rx.Measure(@pins,5,@pulseWidths)
         'rx.readPins(@pins, @pulseWidth)
         'rx_input
-        if pulsewidth[4] > 1_500            ' Switch autonomous mode on
-            'outa[ARMED_LED] := 1
+        if pulsewidth[5] > 1_500            ' Arm flight
             arm_flight
+
+        else                                ' Disarm flight
+            ppm.setall(SVO_MIN)
+            disarm_flight
+            
+        if pulsewidth[4] > 1_500            ' Switch to autonomous mode
+        
+        else
             ppm.set(0, pulsewidth[2])
             ppm.set(1, pulsewidth[0])
             ppm.set(2, pulsewidth[1])
             ppm.set(3, pulsewidth[3])
-
-        else                                ' Switch autonomous mode off
-            'outa[ARMED_LED] := 0            ' Turn on arming LED
-            ppm.setall(SVO_MIN)
-            disarm_flight
-            
            
 '    pause(1000)                 ' Pause for 1 sec
 '   arm_flight
@@ -106,6 +108,10 @@ PUB pause(ms)
 
 '    rx.start(@pins,@pulseWidth)
 '    waitcnt(clkfreq/2 + cnt)
+
+PUB autonomous_flight
+    'TODO
+    'add Ping sensor
 
 PRI arm_flight
 
