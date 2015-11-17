@@ -5,8 +5,8 @@
 ''   Author..... Jason Doyle
 ''               Copyright (c) 2015 Jason Doyle
 ''   E-mail..... jason.e.doyle@gmail.com
-''   Started.... 06 SEP 2015
-''   Updated.... 07 NOV 2015
+''   Started.... SEP. 06, 2015
+''   Updated.... NOV. 17, 2015
 ''
 '' =================================================================================================
 
@@ -41,14 +41,12 @@ VAR
     
 DAT
   pins          LONG 1, 2, 3, 4, 5, 6
-'  pulseWidths   LONG 1, 1, 1, 1, 1
   
 OBJ
 
     ppm     :   "jm_ppm"
     serial  :   "FullDuplexSerial"
     ping    :   "Ping"
-'    rx      :   "ServoInput"
     rx      :   "RX"
     
 PUB Main | i
@@ -67,38 +65,25 @@ PUB Main | i
     
     'cal_channels
 
-'    rx.start(@pins,5,@pulseWidths)
     rx.Start(@pins,@pulseWidth)
     
     repeat 
-        'rx.Measure(@pins,5,@pulseWidths)
-        'rx.readPins(@pins, @pulseWidth)
-        'rx_input
-        if pulsewidth[5] > 1_500            ' Arm flight
+        if pulsewidth[5] > 1_500            ' Arm flight. RC knob
             arm_flight
 
-        else                                ' Disarm flight
+        else                                ' Disarm flight. RC knob
             'ppm.setall(SVO_MIN)
             disarm_flight
             
-        if pulsewidth[4] > 1_500            ' Switch to autonomous mode
-        
+        if pulsewidth[4] > 1_500            ' Switch to autonomous mode. RC switch
+            autonomous_flight
+            
         else
             ppm.set(0, pulsewidth[2])
             ppm.set(1, pulsewidth[0])
             ppm.set(2, pulsewidth[1])
             ppm.set(3, pulsewidth[3])
-           
-'    pause(1000)                 ' Pause for 1 sec
-'   arm_flight
-
-'    ppm.set(TH_CH, 1_550)
-'    pause(5000)
-
-'    ppm.set(TH_CH, SVO_MIN)
-    
-'    pause(500)
-'    disarm_flight
+            
     
 PUB pause(ms)
 
