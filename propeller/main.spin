@@ -35,6 +35,9 @@ CON
     SVO_MAX     = 2_000
 
     SVO_CTR     = 1_500
+    
+' Flight Parameters
+    HOVER_HEIGHT = 12                   ' Hover height in centimeters
 
 VAR
     long  pulsewidth[6]
@@ -94,9 +97,10 @@ PUB pause(ms)
 '    rx.start(@pins,@pulseWidth)
 '    waitcnt(clkfreq/2 + cnt)
 
-PUB autonomous_flight
+PUB autonomous_flight | distance
     'TODO
     'add Ping sensor
+    'distance = ping.Centimeters(PING_PIN)  ' Get distance in centimeters
 
 PRI arm_flight
 
