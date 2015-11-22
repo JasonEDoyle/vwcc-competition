@@ -13,13 +13,13 @@
 CON
 
     _clkmode = xtal1 + pll16x       ' System clock 80 MHz
-    _xinfreq = 5_000_000
+    _xinfreq = 6_000_000
 
 ' Pin Connections
     PING_PIN    = 0
     PPM_PIN     = 25
-    ARMED_LED   = 26
-'    AUTO_LED    = 27
+    ARMED_LED   = 27
+    AUTO_LED    = 26
 '    RPI_RX_PIN  = 3
 '    RPI_TX_PIN  = 4
 
