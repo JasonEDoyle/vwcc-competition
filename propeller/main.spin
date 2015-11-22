@@ -42,7 +42,8 @@ CON
 
 VAR
     long  pulsewidth[6]
-        
+    long  distace
+      
 DAT
   pins          LONG 1, 2, 3, 4, 5, 6
   
@@ -52,7 +53,6 @@ OBJ
     serial  :   "FullDuplexSerial"
     ping    :   "Ping"
     rx      :   "RX"
-    pst     :   "Parallax Serial Terminsal"
         
 PUB Main | i
     
@@ -68,29 +68,31 @@ PUB Main | i
 '    ppm.set(YAW_CH, SVO_CTR)
     
     dira[ARMED_LED] := 1                    ' Set arming LED pin to output
-    
+    dira[AUTO_LED]  := 1                    ' Set Autonomous LED pin to output
+                                            ' 
     'cal_channels
 
     rx.Start(@pins,@pulseWidth)
     
     repeat 
-        autonomous_flight
+        if pulsewidth[5] > 1_500            ' Arm flight. RC knob
+            arm_flight
+            
+            if pulsewidth[4] > 1_500            ' Switch to autonomous mode. RC switch
+                autonomous_flight
+            
+            else
+                outa[AUTO_LED] := 0
+                ppm.set(0, pulsewidth[2])
+                ppm.set(1, pulsewidth[0])
+                ppm.set(2, pulsewidth[1])
+                ppm.set(3, pulsewidth[3])
+
+        else                              ' Disarm flight. RC knob
+            'ppm.setall(SVO_MIN)
+            disarm_flight
+            
         
-'        if pulsewidth[5] > 1_500            ' Arm flight. RC knob
-'            arm_flight
-'
-'        else                                ' Disarm flight. RC knob
-'            'ppm.setall(SVO_MIN)
-'            disarm_flight
-'            
-'        if pulsewidth[4] > 1_500            ' Switch to autonomous mode. RC switch
-'            autonomous_flight
-'            
-'        else
-'            ppm.set(0, pulsewidth[2])
-'            ppm.set(1, pulsewidth[0])
-'            ppm.set(2, pulsewidth[1])
-'            ppm.set(3, pulsewidth[3])
             
     
 PUB pause(ms)
@@ -105,8 +107,9 @@ PUB pause(ms)
 PUB autonomous_flight | distance
     'TODO
     'add Ping sensor
-    distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
-    
+    outa[AUTO_LED] := 1
+'    distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
+    distance++
     serial.Dec(distance)                    ' Output ping distance to terminal
     serial.Tx(13)                           ' New line
 
