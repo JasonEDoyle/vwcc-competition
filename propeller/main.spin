@@ -16,7 +16,7 @@ CON
     _xinfreq = 6_000_000
 
 ' Pin Connections
-    PING_PIN    = 0
+    PING_PIN    = 14
     PPM_PIN     = 25
     ARMED_LED   = 27
     AUTO_LED    = 26
@@ -108,8 +108,8 @@ PUB autonomous_flight | distance
     'TODO
     'add Ping sensor
     outa[AUTO_LED] := 1
-'    distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
-    distance++
+    distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
+ 
     serial.Dec(distance)                    ' Output ping distance to terminal
     serial.Tx(13)                           ' New line
 
