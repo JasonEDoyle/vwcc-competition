@@ -43,12 +43,12 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
     mask = cv2.inRange(hsv, lower_red, upper_red)
 
     # Bitwise-AND mask and original image
-    res = cv2.bitwise_and(frame,frame, mask= mask)
+#    res = cv2.bitwise_and(frame,frame, mask= mask)
 
     # show the frame
     cv2.imshow("Frame", image)
-    cv2.imshow('mask',mask)
-    cv2.imshow('res',res)
+#    cv2.imshow('mask',mask)
+#    cv2.imshow('res',res)
     
     # clear the stream in preparation for the next frame
     rawCapture.truncate(0)
