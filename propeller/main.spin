@@ -56,7 +56,7 @@ OBJ
         
 PUB Main | i
     
-    serial.Start (31, 30, 0, 115_200)
+    serial.Start (16, 15, 0, 115_200)
     ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
     
