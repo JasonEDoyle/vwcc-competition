@@ -1,8 +1,10 @@
 \documentclass{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
 
 \title{ Aerial Alumni \\ 2015  VWCC AUTONOMOUS ROBOTICS COMPETITION }
 \author{ Jason Doyle \\ B.S. Electrical Engineering \\ VPI \& SU \and Phillip Benzinger \\ B.S. Computer Science \\ Liberty University }
-
 
 \date{ \today }
 
@@ -64,8 +66,10 @@ prices must be included in the overall cost of the robot.
 		Speed Controller & 9192000258-0 & Hobby King & 4 & \$12.99 & \$51.96 \\
 		Power Distribution & 9171000530-0 & Hobby King & 1 & \$1.89 & \$1.89 \\
 		Flight Controller & 9171000593-0 & Hobby King & 1 & \$24.99 & \$24.99 \\
+		Propellers & TBD & Hobby King & 4 & \$TBD & \$TBD \\
 		Parallax Propeller Hat & X & Parallax.com & 1 & \$24.95 & \$24.95 \\
-		Standoffs & & & & & \\
+		Electronic Mounting Plate & Custom Part & VWCC & 1 & TBD	& TBD \\
+		Standoffs & & & 8 & & \\
 		Wire & & & & & \\
 		Connectors & & & & & \\
 		Black Zip Ties & 0076328 & Lowes & 8 & X & X \\
@@ -80,6 +84,7 @@ prices must be included in the overall cost of the robot.
 		\hline
 		\textbf{Item} & \textbf{Item Num.} & \textbf{Store} & \textbf{Qty} & \textbf{Price} & \textbf{Subtotal} \\ \hline
 		Speed Controller & 9192000258-0 & Hobby King & 2 & \$12.99 & \$25.98 \\
+		Electronic Mounting Plate & Custom Part & VWCC & 1 & TBD	& TBD \\
 		\hline
 		\multicolumn{6}{ r }{\textbf{\$25.98}} \\ 
 				
@@ -112,5 +117,16 @@ prices must be included in the overall cost of the robot.
 	\end{tabular}
 	
 \section{CAD Drawings}
+
+\begin{figure}[t]
+\caption{Block Diagram}
+\includegraphics[width=\textwidth]{Block_Diagam_v2.pdf}
+\end{figure}
+
+\begin{figure}[t]
+
+\caption{Propeller $\mu$C connections}
+\includegraphics[height=\textwidth, angle=90]{vwcc_competition.pdf}
+\end{figure}
 
 \end{document}
