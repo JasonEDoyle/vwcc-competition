@@ -49,7 +49,10 @@ prices must be included in the overall cost of the robot.
 
 	The problem is to develop an autonomous robot to complete a set of trials. The first trial is.... The second .... third .... forth.... an autonomous air vehicle (AAV) was chosen to complete the trials. 
 	
-	The size of the robot can only be L x W x H in. so a 250 size quad frame was chosen 
+	The size of the robot can only be 8 in. x 12 in. x 10 in. high so a 250 size quad frame 
+	was chosen. 250 represents 250 mm diagonal distance between the center of two propellers.
+	The frame was also chosen because it has a frame built under it, to allow all of the
+	electronics to be mounted.
 
 \section{Conclusion}
 
@@ -66,8 +69,8 @@ prices must be included in the overall cost of the robot.
 		Speed Controller & 9192000258-0 & Hobby King & 4 & \$12.99 & \$51.96 \\
 		Power Distribution & 9171000530-0 & Hobby King & 1 & \$1.89 & \$1.89 \\
 		Flight Controller & 9171000593-0 & Hobby King & 1 & \$24.99 & \$24.99 \\
-		Propellers & TBD & Hobby King & 4 & \$TBD & \$TBD \\
-		Parallax Propeller Hat & X & Parallax.com & 1 & \$24.95 & \$24.95 \\
+		Gemfan Multirotor 10 Pair 6x4.5 Black & 329000381-0 & Hobby King & 1 & \$10.20 & \$10.20 \\
+		Parallax Propeller Hat & 32230 & Parallax.com & 1 & \$24.95 & \$24.95 \\
 		Electronic Mounting Plate & Custom Part & VWCC & 1 & TBD	& TBD \\
 		Standoffs & & & 8 & & \\
 		Wire & & & & & \\
@@ -116,7 +119,14 @@ prices must be included in the overall cost of the robot.
 %		\multicolumn{5}{ r }{\textbf{Grand Total:}}  & \textbf{\$000.00}\\ 
 	\end{tabular}
 	
+\clearpage
+
 \section{CAD Drawings}
+
+\begin{figure}[h!]
+\caption{Electronics plate}
+\includegraphics[scale=0.65, angle=90]{CAD.pdf}
+\end{figure}
 
 \begin{figure}[t]
 \caption{Block Diagram}
@@ -124,7 +134,6 @@ prices must be included in the overall cost of the robot.
 \end{figure}
 
 \begin{figure}[t]
-
 \caption{Propeller $\mu$C connections}
 \includegraphics[height=\textwidth, angle=90]{vwcc_competition.pdf}
 \end{figure}
