@@ -8,7 +8,6 @@
 tech_report/*.aux
 tech_report/*.lof
 tech_report/*.log
-tech_report/*.pdf
 tech_report/*.gz
 tech_report/*.toc
 
