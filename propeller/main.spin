@@ -17,7 +17,7 @@ CON
 
 ' Pin Connections
     PING_PIN    = 14
-    PPM_PIN     = 25
+    PPM_PIN     = 7
     ARMED_LED   = 27
     AUTO_LED    = 26
 '    RPI_RX_PIN  = 3
@@ -74,7 +74,8 @@ PUB Main | i
 
     rx.Start(@pins,@pulseWidth)
     
-    repeat 
+    repeat
+         
         if pulsewidth[5] > 1_500            ' Arm flight. RC knob
             arm_flight
             
@@ -104,14 +105,24 @@ PUB pause(ms)
 '    rx.start(@pins,@pulseWidth)
 '    waitcnt(clkfreq/2 + cnt)
 
-PUB autonomous_flight | distance
+PUB autonomous_flight | distance, throttle
     'TODO
     'add Ping sensor
     outa[AUTO_LED] := 1
     distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
- 
-    serial.Dec(distance)                    ' Output ping distance to terminal
-    serial.Tx(13)                           ' New line
+
+    if distance < 17
+        ' throttle up
+        throttle++
+    if distance > 21
+        ' throttle down
+        throttle--
+        
+    ppm.set(TH_CH, throttle)
+
+'    pause(1000)
+'    serial.Dec(distance)                    ' Output ping distance to terminal
+'    serial.Tx(13)                           ' New line
 
 PRI arm_flight
 
