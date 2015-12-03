@@ -56,7 +56,8 @@ OBJ
         
 PUB Main | i
     
-    serial.Start (16, 15, 0, 115_200)
+    serial.Start (31,  30, 0, 115_200)      ' Communicate with debug cable
+'    serial.Start (16, 15, 0, 115_200)      ' Communicate with RPi
     ppm.start(PPM_PIN, 0, 6, 300, 20_000) ' 6 servos/channels, 300us suggested from jm_ppm.spin, 20_000 suggested from jm_ppm.spin
     pause(1)
     
@@ -76,6 +77,7 @@ PUB Main | i
     
     repeat
          
+        autonomous_flight
         if pulsewidth[5] > 1_500            ' Arm flight. RC knob
             arm_flight
             
@@ -111,18 +113,18 @@ PUB autonomous_flight | distance, throttle
     outa[AUTO_LED] := 1
     distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
 
-    if distance < 17
+'    if distance < 17
         ' throttle up
-        throttle++
-    if distance > 21
+'        throttle++
+'    if distance > 21
         ' throttle down
-        throttle--
+'        throttle--
         
     ppm.set(TH_CH, throttle)
 
 '    pause(1000)
-'    serial.Dec(distance)                    ' Output ping distance to terminal
-'    serial.Tx(13)                           ' New line
+    serial.Dec(distance)                    ' Output ping distance to terminal
+    serial.Tx(13)                           ' New line
 
 PRI arm_flight
 
