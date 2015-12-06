@@ -112,7 +112,8 @@ PUB autonomous_flight | distance, throttle
     'add Ping sensor
     outa[AUTO_LED] := 1
     distance := ping.Centimeters(PING_PIN)  ' Get distance in centimeters
-
+    pause(10)                               ' Required to allow secondary echos to die out.
+    
 '    if distance < 17
         ' throttle up
 '        throttle++
